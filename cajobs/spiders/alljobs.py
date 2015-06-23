@@ -6,8 +6,8 @@ class AlljobsSpider(scrapy.Spider):
     name = "alljobs"
     allowed_domains = ["https://forms.spb.ca.gov/bulletins/showall.cfm"]
     start_urls = (
-        'http://www.https://forms.spb.ca.gov/bulletins/showall.cfm/',
+        'https://forms.spb.ca.gov/bulletins/showall.cfm/',
     )
 
     def parse(self, response):
-        pass
+        filename=response.url.split("/")[-2]
