@@ -9,6 +9,8 @@ import scrapy
 
 
 class CajobsItem(scrapy.Item):
-    # define the fields for your item here like:
+	job_title=scrapy.Field()
+	job_exams=scrapy.Field()
+	job_vacancies=scrapy.Field()
     # name = scrapy.Field()
     pass
