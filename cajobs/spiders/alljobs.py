@@ -25,6 +25,9 @@ class AlljobsSpider(scrapy.Spider):
         	try:
         		job_exams=sel.xpath("./td/a/text()")[0].extract()
         		job_vacancies=sel.xpath("./td/a/text()")[1].extract()
+
+        		job_exams_link=sel.xpath("./td/a/@href")[0].extract() #relative path via cfm
+        		jobs_vacancies_link=sel.xpath("./td/a/@href")[1].extract() #absolute path via 
         	except:
         		pass
         	#job_vacancies=sel.xpath("./td/text()")[2].extract()
@@ -35,7 +38,7 @@ class AlljobsSpider(scrapy.Spider):
         	#print sel.xpath("./td/a/text()").extract()
 
         	try:
-        		print job_exams,job_vacancies
+        		print job_exams,job_vacancies, job_exams_link, jobs_vacancies_link
         	except:
         		pass
         	#print type(sel.xpath("./td")[0]) #iam selector

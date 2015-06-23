@@ -12,5 +12,7 @@ class CajobsItem(scrapy.Item):
 	job_title=scrapy.Field()
 	job_exams=scrapy.Field()
 	job_vacancies=scrapy.Field()
+	job_exams_link=scrapy.Field()
+	job_vacancies_link=scrapy.Field()
     # name = scrapy.Field()
     pass
